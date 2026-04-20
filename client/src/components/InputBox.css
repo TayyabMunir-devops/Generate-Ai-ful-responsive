@@ -1,0 +1,374 @@
+/* ====================================
+   InputBox Component Styles - Fully Responsive
+   ==================================== */
+
+.input-box {
+  background-color: var(--bg-primary);
+  border-top: 1px solid var(--border);
+  padding: var(--spacing-lg);
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.05);
+  flex-shrink: 0;
+  max-width: 100%;
+}
+
+.input-box__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  max-width: 100%;
+}
+
+.input-box__input-wrapper {
+  display: flex;
+  gap: var(--spacing-md);
+  align-items: flex-end;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.input-box__textarea {
+  flex: 1;
+  padding: var(--spacing-md);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  font-family: var(--font-family);
+  font-size: 16px; /* Prevents zoom on iOS */
+  line-height: var(--lh-normal);
+  color: var(--text-primary);
+  background-color: var(--bg-secondary);
+  resize: none;
+  transition: all var(--transition-fast);
+  max-height: 150px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  min-height: 44px;
+  min-width: 0;
+
+  &:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(15, 116, 144, 0.1);
+  }
+
+  &:disabled {
+    background-color: var(--bg-tertiary);
+    color: var(--text-tertiary);
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+
+  &::placeholder {
+    color: var(--text-tertiary);
+  }
+}
+
+/* Submit Button */
+.input-box__btn {
+  padding: var(--spacing-md) var(--spacing-lg);
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-lg);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  white-space: nowrap;
+  font-size: var(--font-size-sm);
+  height: fit-content;
+  min-height: 44px;
+  min-width: 44px;
+  box-shadow: var(--shadow-md);
+  flex-shrink: 0;
+
+  .btn-icon {
+    font-size: var(--font-size-lg);
+    flex-shrink: 0;
+  }
+
+  .btn-label {
+    flex-shrink: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &:hover:not(:disabled) {
+    background-color: var(--primary-light);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
+  }
+
+  &:active:not(:disabled) {
+    transform: translateY(0);
+    box-shadow: var(--shadow-md);
+  }
+
+  &:disabled {
+    background-color: var(--text-tertiary);
+    cursor: not-allowed;
+    opacity: 0.5;
+    box-shadow: var(--shadow-sm);
+  }
+}
+
+.input-box__btn--stop {
+  background-color: var(--error);
+  animation: pulse 1s infinite;
+
+  &:hover {
+    background-color: #dc2626;
+  }
+}
+
+/* Hint Text */
+.input-box__hint {
+  font-size: var(--font-size-sm);
+  color: var(--text-tertiary);
+  text-align: right;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: var(--spacing-xs);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.hint-loading {
+  animation: fadeInOut 1.5s ease-in-out infinite;
+}
+
+.hint-default {
+  kbd {
+    display: inline-block;
+    padding: 0.2em 0.4em;
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    font-family: var(--font-mono);
+    font-size: 0.85em;
+    box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.05);
+    flex-shrink: 0;
+  }
+}
+
+/* Animations */
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: var(--shadow-md);
+  }
+  50% {
+    box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.3), var(--shadow-md);
+  }
+}
+
+/* ====================================
+   Responsive Design - Tablets (769px - 1024px)
+   ==================================== */
+
+@media (max-width: 1024px) {
+  .input-box {
+    padding: var(--spacing-lg);
+  }
+
+  .input-box__input-wrapper {
+    gap: var(--spacing-md);
+  }
+
+  .input-box__textarea {
+    padding: var(--spacing-md);
+    font-size: 16px;
+  }
+
+  .input-box__btn {
+    padding: var(--spacing-md) var(--spacing-lg);
+  }
+
+  .input-box__hint {
+    font-size: var(--font-size-xs);
+  }
+}
+
+/* ====================================
+   Responsive Design - Mobile (max-width: 768px)
+   ==================================== */
+
+@media (max-width: 768px) {
+  .input-box {
+    padding: var(--spacing-md);
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.04);
+  }
+
+  .input-box__form {
+    gap: var(--spacing-xs);
+  }
+
+  .input-box__input-wrapper {
+    gap: var(--spacing-sm);
+  }
+
+  .input-box__textarea {
+    padding: var(--spacing-sm);
+    font-size: 16px;
+    min-height: 40px;
+    max-height: 120px;
+  }
+
+  .input-box__btn {
+    padding: var(--spacing-sm) var(--spacing-md);
+    min-height: 40px;
+    min-width: 40px;
+    font-size: var(--font-size-xs);
+
+    .btn-label {
+      display: none;
+    }
+
+    .btn-icon {
+      font-size: var(--font-size-base);
+    }
+  }
+
+  .input-box__hint {
+    font-size: var(--font-size-xs);
+    margin-top: var(--spacing-xs);
+  }
+
+  .hint-default {
+    kbd {
+      font-size: 0.75em;
+      padding: 0.15em 0.3em;
+    }
+  }
+}
+
+/* ====================================
+   Responsive Design - Small Mobile (max-width: 480px)
+   ==================================== */
+
+@media (max-width: 480px) {
+  .input-box {
+    padding: var(--spacing-sm);
+  }
+
+  .input-box__form {
+    gap: var(--spacing-xs);
+  }
+
+  .input-box__input-wrapper {
+    gap: var(--spacing-xs);
+    flex-wrap: nowrap;
+  }
+
+  .input-box__textarea {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    font-size: 16px;
+    min-height: 38px;
+    max-height: 100px;
+  }
+
+  .input-box__btn {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    min-height: 38px;
+    min-width: 38px;
+    font-size: var(--font-size-xs);
+    border-radius: var(--radius-md);
+
+    .btn-label {
+      display: none;
+    }
+
+    .btn-icon {
+      font-size: 1rem;
+    }
+  }
+
+  .input-box__hint {
+    font-size: 0.7rem;
+  }
+
+  .hint-default {
+    kbd {
+      font-size: 0.65em;
+      padding: 0.1em 0.25em;
+    }
+  }
+}
+
+/* ====================================
+   Scrollbar
+   ==================================== */
+
+.input-box__textarea::-webkit-scrollbar {
+  width: 4px;
+}
+
+.input-box__textarea::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.input-box__textarea::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 2px;
+
+  &:hover {
+    background: var(--text-tertiary);
+  }
+}
+
+/* ====================================
+   Accessibility & User Preferences
+   ==================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .input-box__btn,
+  .input-box__textarea {
+    transition: none !important;
+  }
+
+  .input-box__btn--stop {
+    animation: none !important;
+  }
+}
+
+/* Prevent zoom on input focus on iOS */
+@media (max-width: 768px) {
+  input,
+  textarea {
+    font-size: 16px !important;
+  }
+}
+
+/* Handle safe area insets */
+@supports (padding: max(0px)) {
+  .input-box {
+    padding-left: max(var(--spacing-md), env(safe-area-inset-left));
+    padding-right: max(var(--spacing-md), env(safe-area-inset-right));
+    padding-bottom: max(var(--spacing-md), env(safe-area-inset-bottom));
+  }
+}
+
+/* Handle notch on landscape mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+  .input-box {
+    padding: var(--spacing-sm);
+  }
+
+  .input-box__textarea {
+    max-height: 80px;
+  }
+}
