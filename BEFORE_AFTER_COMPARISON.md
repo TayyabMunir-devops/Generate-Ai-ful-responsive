@@ -52,7 +52,7 @@ Same! (Good - desktop unchanged)
 **BEFORE:**
 ```
 ┌─────────────────┐
-│ ChatGPT Clone   │  ← No menu button!
+│ ChatGPT          │  ← No menu button!
 ├─────────────────┤
 │ Sidebar pushed  │
 │ message area    │
@@ -74,7 +74,7 @@ Same! (Good - desktop unchanged)
 **AFTER:**
 ```
 ┌─────────────────┐
-│ ☰ ChatGPT Clone │  ← Menu button!
+│ ☰ ChatGPT       │  ← Menu button!
 ├─────────────────┤
 │   User: Hello!  │
 │  ─────────────  │

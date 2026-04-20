@@ -3,7 +3,10 @@
 > Enterprise-grade AI chatbot application with Ollama integration, built with React, Express, and modern web technologies.
 
 ![Version](https://img.shields.io/badge/version-1.0.0-blue)
-![License](https://img.shields.io/badge/license-MIT-green)
+![GitHub stars](https://img.shields.io/github/stars/tayyabmunir-devops/professional-chatgpt-clone?style=social)
+![GitHub forks](https://img.shields.io/github/forks/tayyabmunir-devops/professional-chatgpt-clone?style=social)
+![GitHub issues](https://img.shields.io/github/issues/tayyabmunir-devops/professional-chatgpt-clone)
+![GitHub last commit](https://img.shields.io/github/last-commit/tayyabmunir-devops/professional-chatgpt-clone)
 ![Node](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen)
 
 ## 📋 Table of Contents
