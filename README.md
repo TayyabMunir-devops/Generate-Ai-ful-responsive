@@ -409,13 +409,13 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## 👨‍💻 Author
 
 **Your Organization**
-- GitHub: [@yourusername](https://github.com/yourusername)
+- GitHub: [tayyabmunir-devops](https://github.com/tayyabmunir-devops)
 
 ---
 
 ## 🙋 Support
 
-For support, email support@example.com or open an issue on GitHub.
+For support, email roshanmunir97@gmail.com or open an issue on GitHub.
 
 ## 📊 Project Status
 
