@@ -1,4 +1,4 @@
-# 🚀 Professional ChatGPT Clone
+# 🚀 Professional ChatGPT 
 
 > Enterprise-grade AI chatbot application with Ollama integration, built with React, Express, and modern web technologies.
 
@@ -188,7 +188,7 @@ npm run dev
 ## 📁 Project Structure
 
 ```
-professional-chatgpt-clone/
+professional-chatgpt/
 ├── server/
 │   └── src/
 │       ├── index.js              # Main server entry point
