@@ -68,7 +68,7 @@ function App() {
             >
               ☰
             </button>
-            <h1 className="app-title">Professional ChatGPT</h1>
+            <h1 className="app-title">Professional ChatGPTTTT</h1>
             <div className="server-status" title="Server status">
               <span className={`status-indicator status-${serverStatus}`}></span>
               {serverStatus === 'healthy' ? 'Connected' : 'Disconnected'}
