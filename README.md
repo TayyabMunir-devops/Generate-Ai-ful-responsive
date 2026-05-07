@@ -69,7 +69,7 @@
 
 ## 📋 Prerequisites
 
-Before you begin, ensure you have the following installed:
+Before you begin, ensure you have the following   installed:
 
 1. **Node.js** (v18.0.0 or higher)
    ```bash
